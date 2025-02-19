@@ -50,4 +50,22 @@ public class Libro {
         this.stato = stato;
     }
 
+    public void addRichiesta(Utente utente){
+        for (int i = 0; i < codaRichieste.length; i++){
+            if (codaRichieste[i] == null){
+                codaRichieste[i] = utente;
+                return;
+            }
+        }
+    }
+
+    public void removeRichiesta(Utente utente){
+        for (int i = 0; i < codaRichieste.length; i++){
+            if (codaRichieste[i].equals(utente)){
+                codaRichieste[i] = null;
+                return;
+            }
+        }
+    }
+
 }
